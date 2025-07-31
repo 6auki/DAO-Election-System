@@ -23,7 +23,9 @@ This project implements an upgradeable DAO Election system using Solidity and Op
   * `ERC1967Proxy`
  
 # Demo Frontend (no blockchain interaction!)
+## Dashboard Part
 ![Dashboard](gifs/part_1.gif)
+## Create Election Part
 ![Create Election](gifs/part_2.gif)
 
 ## Features
