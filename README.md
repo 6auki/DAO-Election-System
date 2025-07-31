@@ -7,26 +7,50 @@ This project implements an upgradeable DAO Election system using Solidity and Op
 
 ---
 
-## Security Considerations
-
-* All upgrades are restricted via `onlyOwner`
-* Reentrancy protection added to voting functions
-* Emergency stop disables voting and hides results
-
-## Dependencies
-
-* OpenZeppelin Contracts Upgradeable
-  * `Initializable`
-  * `UUPSUpgradeable`
-  * `OwnableUpgradeable`
-  * `ReentrancyGuardUpgradeable`
-  * `ERC1967Proxy`
- 
 # Demo Frontend (no blockchain interaction!)
 ## Dashboard Part
 ![Dashboard](gifs/part_1.gif)
 ## Create Election Part
 ![Create Election](gifs/part_2.gif)
+---
+
+## Table of Contents
+
+1. [Features](#features)  
+   1.1 [Election Functionalities](#election-functionalities)  
+   1.2 [Emergency Control](#emergency-control)  
+   1.3 [Upgradeable Design (UUPS)](#upgradeable-design-uups)  
+   1.4 [Factory Pattern](#factory-pattern)
+
+2. [Architecture Overview](#architecture-overview)
+
+3. [Smart Contracts](#smart-contracts)  
+   3.1 [Election.sol](#electionsol)  
+   3.2 [ElectionFactory.sol](#electionfactorysol)
+
+4. [How Upgradeability Works](#how-upgradeability-works)  
+   4.1 [Initial Setup](#initial-setup)  
+   4.2 [Upgrading](#upgrading)  
+   4.3 [Example](#example)
+
+5. [ElectionConfig Structure](#electionconfig-structure)
+
+6. [VoterEligibilityMode Enum](#votereligibilitymode-enum)
+
+7. [Events Emitted](#events-emitted)
+
+8. [Usage Guide](#usage-guide)  
+   8.1 [Deploy the Implementation](#1-deploy-the-implementation)  
+   8.2 [Deploy the Factory](#2-deploy-the-factory)  
+   8.3 [Create a New Election](#3-create-a-new-election)  
+   8.4 [Interact With Election Proxy](#4-interact-with-election-proxy)  
+   8.5 [Upgrade Logic](#5-upgrade-logic)
+
+9. [Security Considerations](#security-considerations)
+
+10. [Dependencies](#dependencies)
+
+---
 
 ## Features
 
@@ -75,7 +99,7 @@ ElectionFactory -> ERC1967Proxy -> Election (Logic)
 
 ## Smart Contracts
 
-### Election
+### Election.sol
 
 Upgradeable logic contract using:
 
@@ -96,7 +120,7 @@ Upgradeable logic contract using:
 * `emergencyStop()`: Emergency halt election
 * `updateElectionSettings(...)`: Update configs pre-start
 
-### ElectionFactory
+### ElectionFactory.sol
 
 Handles proxy deployment and logic upgrades.
 
@@ -211,6 +235,21 @@ Election newImpl = new ElectionV2();
 factory.updateElectionImplementation(address(newImpl));
 // Call upgradeTo() from frontend or script
 ```
+
+## Security Considerations
+
+* All upgrades are restricted via `onlyOwner`
+* Reentrancy protection added to voting functions
+* Emergency stop disables voting and hides results
+
+## Dependencies
+
+* OpenZeppelin Contracts Upgradeable
+  * `Initializable`
+  * `UUPSUpgradeable`
+  * `OwnableUpgradeable`
+  * `ReentrancyGuardUpgradeable`
+  * `ERC1967Proxy`
 
 ## License
 
