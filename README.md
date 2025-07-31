@@ -21,33 +21,24 @@ This project implements an upgradeable DAO Election system using Solidity and Op
    1.2 [Emergency Control](#emergency-control)  
    1.3 [Upgradeable Design (UUPS)](#upgradeable-design-uups)  
    1.4 [Factory Pattern](#factory-pattern)
-
 2. [Architecture Overview](#architecture-overview)
-
 3. [Smart Contracts](#smart-contracts)  
    3.1 [Election.sol](#electionsol)  
    3.2 [ElectionFactory.sol](#electionfactorysol)
-
 4. [How Upgradeability Works](#how-upgradeability-works)  
    4.1 [Initial Setup](#initial-setup)  
    4.2 [Upgrading](#upgrading)  
    4.3 [Example](#example)
-
 5. [ElectionConfig Structure](#electionconfig-structure)
-
 6. [VoterEligibilityMode Enum](#votereligibilitymode-enum)
-
 7. [Events Emitted](#events-emitted)
-
 8. [Usage Guide](#usage-guide)  
    8.1 [Deploy the Implementation](#1-deploy-the-implementation)  
    8.2 [Deploy the Factory](#2-deploy-the-factory)  
    8.3 [Create a New Election](#3-create-a-new-election)  
    8.4 [Interact With Election Proxy](#4-interact-with-election-proxy)  
    8.5 [Upgrade Logic](#5-upgrade-logic)
-
 9. [Security Considerations](#security-considerations)
-
 10. [Dependencies](#dependencies)
 
 ---
