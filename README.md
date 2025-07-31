@@ -7,7 +7,7 @@ This project implements an upgradeable DAO Election system using Solidity and Op
 
 ---
 
-# Demo Frontend (no blockchain interaction!)
+# Demo Frontend (no blockchain interaction here!) (only for show :))
 ## Dashboard Part
 ![Dashboard](gifs/part_1.gif)
 ## Create Election Part
@@ -16,7 +16,7 @@ This project implements an upgradeable DAO Election system using Solidity and Op
 
 ## Table of Contents
 
-1. [Features](#features)  
+1. [Smart Contract Features](#smart-contract-features)  
    1.1 [Election Functionalities](#election-functionalities)  
    1.2 [Emergency Control](#emergency-control)  
    1.3 [Upgradeable Design (UUPS)](#upgradeable-design-uups)  
@@ -43,7 +43,7 @@ This project implements an upgradeable DAO Election system using Solidity and Op
 
 ---
 
-## Features
+## Smart Contract Features
 
 ### Election Functionalities
 
