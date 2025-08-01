@@ -4,6 +4,7 @@ Solidity Smart Contract. An upgradeable, modular, and secure DAO Voting/Election
 ---
 # Overview
 This project implements an upgradeable DAO Election system using Solidity and OpenZeppelin's UUPS proxy pattern. It supports multiple voting strategies, upgradeable contracts, and modular design for flexibility and maintainability.
+---
 
 # Demo Frontend (no blockchain interaction here!) (only for show :))
 ## Dashboard Part
